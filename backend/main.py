@@ -39,6 +39,11 @@ class MndaFormData(BaseModel):
     party2: Party
 
 
+@app.get("/")
+def root():
+    return {"message": "Pre Legal Document Generator API", "docs": "/docs"}
+
+
 @app.get("/health")
 def health():
     return {"status": "ok"}
